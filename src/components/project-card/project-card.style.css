@@ -1,0 +1,35 @@
+.project-card-links {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+}
+
+.project-card-link {
+    transition: all .3s;
+    position: relative;
+}
+
+.project-card-link::before {
+    content: "";
+    position: absolute;
+    width: 0;
+    left: auto;
+    background-color: #fff;
+    height: 3px;
+    bottom: -2px;
+    transition: all .3s;
+    right: 0;
+}
+
+.project-card-link:hover::before {
+    width: 100%;
+    right: auto;
+    left: 0;
+}
+
+.project-card {
+    background: linear-gradient(90.21deg, #AA367C -5.91%, #4A2FBD 111.58%);
+    border-radius: 30px;
+    overflow: hidden;
+    padding: 30px;
+}
