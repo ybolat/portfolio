@@ -1,19 +1,24 @@
 import {Col, Container, Nav, Row, Tab} from "react-bootstrap";
 import './project.style.css';
 import ProjectCard from "../project-card/project-card.component";
+import {useTranslation} from "react-i18next";
 
 const projectsReact = [
     {
-        title: "Online Shop",
-        stack: "React, Redux, Redux-Saga, Firebase, CSS-IN-JS, SCSS",
-        description: "A regular online store. You can authorize through mail or through google account. There are also 5 different categories. You can add clothes to your cart, and pay for all products.",
+        titleEn: "Online Shop",
+        titleRu: "Онлайн магазин",
+        stack: "Redux, Redux-Saga, Firebase, CSS-IN-JS, SCSS",
+        descriptionEn: "A regular online store. You can authorize through mail or through google account. There are also 5 different categories. You can add clothes to your cart, and pay for all products that are in your cart.",
+        descriptionRu: "Обычный интернет-магазин. Можно авторизоваться через почту или через google аккаунт. Также есть 5 различных категорий. Вы можете добавлять одежду в корзину и оплачивать все товары.",
         gitHubLink: "https://github.com/ybolat/online-shop",
         visitLink: "https://online-shop-react-ybolat.netlify.app"
     },
     {
-        title: "GitHub Api",
-        stack: "React, ReduxToolKit, RTKQuery, TailwindCSS",
-        description: "In this project, you can search for github accounts. You will also see all open repositories of this account and can add them to your favorites. Also by clicking on them you will be able to open that git",
+        titleEn: "GitHub Api",
+        titleRu: "GitHub Api",
+        stack: "ReduxToolKit, RTKQuery, TailwindCSS, Typescript",
+        descriptionEn: "In this project, you can search for github accounts. You will also see all open repositories of this account and can add them to your favorites. Also by clicking on them you will be able to open that git repositories",
+        descriptionRu: "В этом проекте вы можете искать аккаунты на github. Вы также увидите все открытые репозитории этого аккаунта и сможете добавить их в избранное. Также, щелкнув на них, вы сможете открыть этот git",
         gitHubLink: "https://github.com/ybolat/github-api",
         visitLink: "https://githubapi-ybolat.netlify.app"
     }
@@ -21,8 +26,10 @@ const projectsReact = [
 
 const projectsVue = [
     {
-        title: "Vue title",
-        description: "Vue description",
+        titleEn: "Vue title",
+        titleRu: "Онлайн магазин",
+        stack: "Vue",
+        descriptionEn: "Vue description",
         gitHubLink: "Vue github",
         visitLink: "Vue visit"
     }
@@ -30,8 +37,10 @@ const projectsVue = [
 
 const projectsAngular = [
     {
-        title: "Angular title",
-        description: "Angular description",
+        titleEn: "Angular title",
+        titleRu: "Онлайн магазин",
+        stack: "Angular",
+        descriptionEn: "Angular description",
         gitHubLink: "Angular github",
         visitLink: "Angular visit"
     }
@@ -39,12 +48,14 @@ const projectsAngular = [
 
 const Project = () => {
 
+    const {t} = useTranslation();
+
     return (
         <section id={"projects"} className={"project"}>
             <Container>
                 <Row>
                     <Col size={12}>
-                        <h2>Projects</h2>
+                        <h2>{t('projects')}</h2>
                         <Tab.Container id={"projects-tabs"} defaultActiveKey={"first"}>
                             <Nav variant="pills" className="nav-pills mb-5 justify-content-center align-items-center"
                                  id="pills-tab">

@@ -12,6 +12,7 @@ import JavaLogo from '../../assets/img/java.svg';
 import SpringLogo from '../../assets/img/spring.svg';
 import PostgreSQLLogo from '../../assets/img/postgresql.svg';
 import SkillCard from "../skill-card/skill-card.component";
+import {useTranslation} from "react-i18next";
 
 const responsive = {
     superLargeDesktop: {
@@ -77,13 +78,15 @@ const skillsArray = [
 
 const Skills = () => {
 
+    const {t} = useTranslation();
+
     return (
         <section id={"skills"} className={"skill"}>
             <div className={"container"}>
                 <div className={"row"}>
                     <div className={"col-12"}>
                         <div className={"skill-bx wow zoomIn"}>
-                            <h2>Skills</h2>
+                            <h2>{t('skills')}</h2>
                             <Carousel responsive={responsive} infinite={true}
                                       className={"owl-carousel owl-theme skill-slider"}>
                                 {skillsArray.map((v, index) => <SkillCard key={index} skill={v}/>)}

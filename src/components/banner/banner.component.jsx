@@ -3,9 +3,11 @@ import {useEffect, useState} from "react";
 import {Col, Container, Row} from "react-bootstrap";
 import myPhoto from '../../assets/img/my-photo.png';
 import {ArrowRightCircle} from 'react-bootstrap-icons';
+import {useTranslation} from "react-i18next";
 
 const period = 400;
-const wordLoop = ["Web Developer", "Software Engineer", "Frontend Developer"];
+const wordLoopEn = ["Web Developer", "Software Engineer", "Frontend Developer"];
+const wordLoopRu = ["Вэб Разработчик", "Инженер ПО", "Фронтенд Разработчик"];
 
 const Banner = () => {
 
@@ -13,6 +15,8 @@ const Banner = () => {
     const [isDeleting, setIsDeleting] = useState(false);
     const [text, setText] = useState('');
     const [typingPeriod, setTypingPeriod] = useState(period);
+
+    const {t, i18n} = useTranslation();
 
     useEffect(() => {
 
@@ -26,6 +30,14 @@ const Banner = () => {
     }, [text]);
 
     const typingFunc = () => {
+        let wordLoop = [];
+
+        if (i18n.language === 'ru') {
+            wordLoop = wordLoopRu;
+        } else {
+            wordLoop = wordLoopEn;
+        }
+
         let i = wordNumber % wordLoop.length;
         let fullText = wordLoop[i];
         let updatedText = isDeleting ? fullText.substring(0, text.length - 1) : fullText.substring(0, text.length + 1);
@@ -51,36 +63,34 @@ const Banner = () => {
             <Container>
                 <Row className="aligh-items-center">
                     <Col xs={12} md={6} xl={7}>
-                        <span className="tagline">Welcome to my Portfolio</span>
-                        <h1>{`Hi! I'm Yerassyl`} <span className="txt-rotate">
+                        <span className="tagline">{t('welcome')}</span>
+                        <h1>{t('i_am')} <span className="txt-rotate">
                             <span className="wrap">{text}</span></span></h1>
                         <div>
                             <p>
-                                Now I am a Full-Stack developer, but I have a strong desire to become a Fronted
-                                developer.
+                                {t('become_front')}
                             </p>
                             <p>
-                                During school time, I took places in regional Olympiads in computer science.
+                                {t('during_school')}
                             </p>
                             <p>
-                                I graduated with honors from one of the best universities of the country.
+                                {t('graduate')}
                             </p>
                             <p>
-                                Participated in an international hackathon.
+                                {t('hackathon')}
                             </p>
                             <p>
-                                I lead an active social life.
+                                {t('social_life')}
                             </p>
                             <p>
-                                At my new job I will definitely be a responsible, communicative and eager to develop
-                                employee
+                                {t('new_job')}
                             </p>
-                            <div className={"cv-links"}>
-                                <button onClick={() => alert("not ready yet")}>Download CV in Russian<ArrowRightCircle/>
-                                </button>
-                                <button onClick={() => alert("not ready yet")}>Download CV in English<ArrowRightCircle/>
-                                </button>
-                            </div>
+                            {/*<div className={"cv-links"}>*/}
+                            {/*    <button onClick={() => alert("not ready yet")}>Download CV in Russian<ArrowRightCircle/>*/}
+                            {/*    </button>*/}
+                            {/*    <button onClick={() => alert("not ready yet")}>Download CV in English<ArrowRightCircle/>*/}
+                            {/*    </button>*/}
+                            {/*</div>*/}
                         </div>
                     </Col>
                     <Col xs={12} md={6} xl={5} className={"text-center"}>

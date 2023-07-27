@@ -1,20 +1,19 @@
 import './footer.style.css';
 import {Col, Container, Row} from "react-bootstrap";
-import logoPng from '../../assets/img/logo.png';
 import SocialIcon from "../social-icon/social-icon.component";
+import {useTranslation} from "react-i18next";
 
 const Footer = () => {
+
+    const {t} = useTranslation();
 
     return (
         <footer className={"footer"}>
             <Container>
-                <Row className={"align-items-center"}>
+                <Row className={"justify-content-end text-end"}>
                     <Col size={12} sm={6}>
-                        <img src={logoPng} alt={""}/>
-                    </Col>
-                    <Col size={12} sm={6} className={"text-center text-sm-end"}>
                         <SocialIcon/>
-                        <p>Done by Yerassyl Bolat 2023.</p>
+                        <p>{t('footer')}</p>
                     </Col>
                 </Row>
             </Container>
