@@ -30,7 +30,11 @@ const Contact = () => {
         e.preventDefault();
 
         try {
-            await emailjs.send("service_vu10a9u", "template_z3h6lsq", formData, "JiZ27JFRO-0NoCoa3");
+            await emailjs.send(process.env.REACT_APP_EMAILJS_SERVICE_ID,
+                process.env.REACT_APP_EMAILJS_TEMPLATE_ID,
+                formData,
+                process.env.REACT_APP_EMAILJS_PUBLIC_KEY);
+
             setLoading(false);
             setFormData(INITIAL_FORM_DATA);
             message.open({
