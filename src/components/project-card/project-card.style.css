@@ -1,13 +1,20 @@
+@media screen and (max-width: 575px) {
+    .project-card-container {
+        margin-top: 15px;
+    }
+}
+
+.project-card {
+    display: flex;
+    height: 100%;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
 .project-card-links {
     display: flex;
     justify-content: space-between;
     margin-top: 10px;
-}
-
-@media screen and (max-width: 575px) {
-    .project-card {
-        margin-top: 15px;
-    }
 }
 
 .project-card-link {
