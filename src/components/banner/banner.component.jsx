@@ -5,7 +5,7 @@ import myPhoto from '../../assets/img/my-photo.png';
 import {ArrowRightCircle} from 'react-bootstrap-icons';
 import {useTranslation} from "react-i18next";
 
-const period = 400;
+const period = 100;
 const wordLoopEn = ["Web Developer", "Software Engineer", "Frontend Developer"];
 const wordLoopRu = ["Вэб Разработчик", "Инженер ПО", "Фронтенд Разработчик"];
 
@@ -64,7 +64,7 @@ const Banner = () => {
                 <Row className="aligh-items-center">
                     <Col xs={12} md={6} xl={7}>
                         <span className="tagline">{t('welcome')}</span>
-                        <h1>
+                        <h1 className={"hello-text"}>
                             {t('i_am')}&nbsp;
                             <span className="txt-rotate">
                                 <span className="wrap">{text}</span>

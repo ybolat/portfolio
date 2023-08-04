@@ -20,7 +20,7 @@
     display: inline-block;
 }
 
-.banner h1 {
+.hello-text {
     font-size: 34px;
     font-weight: 700;
     letter-spacing: 0.8px;
@@ -29,12 +29,33 @@
     display: block;
 }
 
+@media screen and (max-width: 1024px) {
+    .hello-text {
+        height: 68px;
+        display: flex;
+        flex-direction: column;
+    }
+
+}
+
+@media screen and (max-width: 768px) {
+    .hello-text {
+        height: 120px;
+    }
+}
+
 .banner p {
     color: #B8B8B8;
     font-size: 18px;
     letter-spacing: 0.8px;
     line-height: 1.5em;
     width: 96%;
+}
+
+@media screen and (max-width: 425px) {
+    .banner p {
+        color: #FFFFFF;
+    }
 }
 
 .banner button {
