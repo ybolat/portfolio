@@ -65,7 +65,7 @@ const Banner = () => {
                     <Col xs={12} md={6} xl={7}>
                         <span className="tagline">{t('welcome')}</span>
                         <h1>
-                            {t('i_am')}
+                            {t('i_am')}&nbsp;
                             <span className="txt-rotate">
                                 <span className="wrap">{text}</span>
                             </span>
