@@ -64,8 +64,12 @@ const Banner = () => {
                 <Row className="aligh-items-center">
                     <Col xs={12} md={6} xl={7}>
                         <span className="tagline">{t('welcome')}</span>
-                        <h1>{t('i_am')} <span className="txt-rotate">
-                            <span className="wrap">{text}</span></span></h1>
+                        <h1>
+                            {t('i_am')}
+                            <span className="txt-rotate">
+                                <span className="wrap">{text}</span>
+                            </span>
+                        </h1>
                         <div>
                             <p>
                                 {t('banner-text-hello')}
