@@ -52,24 +52,22 @@ const Navigation = () => {
     return (
         <Navbar expand="sm" className={isScrolled ? "scrolled" : ""}>
             <Container>
-                <Navbar.Brand href="/">
-                    <div className="dropdown">
-                        <button className="dropdown-toggle" type="button" data-bs-toggle="dropdown"
-                                aria-expanded="false">
-                            <img className={"globe"} src={globeSvg} alt={""}/>
-                        </button>
-                        <ul className={"dropdown-menu dropdown-menu-dark"}>
-                            {languages.map(value => {
-                                return <li key={value.country_code}>
-                                    <button className={"dropdown-item"} onClick={() => changeLanguage(value.code)}>
-                                        <span className={`flag-icon flag-icon-${value.country_code}`}></span>
-                                        {value.name}
-                                    </button>
-                                </li>
-                            })}
-                        </ul>
-                    </div>
-                </Navbar.Brand>
+                <div className="dropdown">
+                    <button className="dropdown-toggle" type="button" data-bs-toggle="dropdown"
+                            aria-expanded="false">
+                        <img className={"globe"} src={globeSvg} alt={""}/>
+                    </button>
+                    <ul className={"dropdown-menu dropdown-menu-dark"}>
+                        {languages.map(value => {
+                            return <li key={value.country_code}>
+                                <button className={"dropdown-item"} onClick={() => changeLanguage(value.code)}>
+                                    <span className={`flag-icon flag-icon-${value.country_code}`}></span>
+                                    {value.name}
+                                </button>
+                            </li>
+                        })}
+                    </ul>
+                </div>
                 <Navbar.Toggle aria-controls="basic-navbar-nav">
                     <span className="navbar-toggler-icon"></span>
                 </Navbar.Toggle>

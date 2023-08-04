@@ -26,23 +26,25 @@ const projectsReact = [
 
 const projectsVue = [
     {
-        titleEn: "Vue title",
-        titleRu: "Онлайн магазин",
+        titleEn: "Unfortunately, there are no Vue projects yet.",
+        titleRu: "К сожелению пока нет проектов на Vue",
         stack: "Vue",
-        descriptionEn: "Vue description",
-        gitHubLink: "Vue github",
-        visitLink: "Vue visit"
+        descriptionEn: "Unfortunately, there are no Vue projects yet.",
+        descriptionRu: "К сожелению пока нет проектов на Vue",
+        gitHubLink: "https://github.com/ybolat/",
+        visitLink: "https://github.com/ybolat/"
     }
 ];
 
 const projectsAngular = [
     {
-        titleEn: "Angular title",
-        titleRu: "Онлайн магазин",
+        titleEn: "Unfortunately, there are no Angular projects yet.",
+        titleRu: "К сожелению пока нет проектов на Angular",
         stack: "Angular",
-        descriptionEn: "Angular description",
-        gitHubLink: "Angular github",
-        visitLink: "Angular visit"
+        descriptionEn: "Unfortunately, there are no Angular projects yet.",
+        descriptionRu: "К сожелению пока нет проектов на Angular",
+        gitHubLink: "https://github.com/ybolat/",
+        visitLink: "https://github.com/ybolat/"
     }
 ];
 

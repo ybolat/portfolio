@@ -68,29 +68,16 @@ const Banner = () => {
                             <span className="wrap">{text}</span></span></h1>
                         <div>
                             <p>
-                                {t('become_front')}
+                                {t('banner-text-hello')}
+                                <br/><br/>
+                                {t('banner-text-passion')}
+                                <br/><br/>
+                                {t('banner-text-knowledge')}
+                                <br/><br/>
+                                {t('banner-text-plans')}
+                                <br/><br/>
+                                {t('banner-text-end')}
                             </p>
-                            <p>
-                                {t('during_school')}
-                            </p>
-                            <p>
-                                {t('graduate')}
-                            </p>
-                            <p>
-                                {t('hackathon')}
-                            </p>
-                            <p>
-                                {t('social_life')}
-                            </p>
-                            <p>
-                                {t('new_job')}
-                            </p>
-                            {/*<div className={"cv-links"}>*/}
-                            {/*    <button onClick={() => alert("not ready yet")}>Download CV in Russian<ArrowRightCircle/>*/}
-                            {/*    </button>*/}
-                            {/*    <button onClick={() => alert("not ready yet")}>Download CV in English<ArrowRightCircle/>*/}
-                            {/*    </button>*/}
-                            {/*</div>*/}
                         </div>
                     </Col>
                     <Col xs={12} md={6} xl={5} className={"text-center"}>
