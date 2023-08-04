@@ -138,3 +138,10 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 .dropdown-toggle::after {
     color: #fff;
 }
+
+
+@media screen and (max-width: 425px) {
+    .scrolled{
+        background-color: #121212;
+    }
+}
