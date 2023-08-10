@@ -35,7 +35,7 @@ const responsive = {
 
 const skillsArray = [
     {
-        "skillName": "React",
+        "skillName": "React/React Native",
         "imgUrl": ReactLogo,
     },
     {

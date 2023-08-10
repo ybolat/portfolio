@@ -24,15 +24,15 @@ const projectsReact = [
     }
 ];
 
-const projectsVue = [
+const projectsReactNative = [
     {
-        titleEn: "Unfortunately, there are no Vue projects yet.",
-        titleRu: "К сожелению пока нет проектов на Vue",
-        stack: "Vue",
-        descriptionEn: "Unfortunately, there are no Vue projects yet.",
-        descriptionRu: "К сожелению пока нет проектов на Vue",
-        gitHubLink: "https://github.com/ybolat/",
-        visitLink: "https://github.com/ybolat/"
+        titleEn: "Search job(Incomplete)",
+        titleRu: "Поиск работы(Не законченное)",
+        stack: "React Native, React, Expo",
+        descriptionEn: "In this project, you can search for jobs. There is a job search engine. You can go to the job site. In order to open the application you need to download the Expo application. Expo is available in appstore and google play. Then on IOS you need to open the camera and scan the QR, and on android you need to go to the application and scan the application through it.",
+        descriptionRu: `В этом проекте вы можете искать работу. Есть поисковик работы. Можно переходит на сайт вакансии. Для того, что бы открыть приложение нужно скачать приложение Expo. Expo доступен и в appstore и в google play. После на IOS нужно открыть камеру и отсканировать QR, а на android нужно зайди в приложение и через него отсканировать приложение.`,
+        gitHubLink: "https://github.com/ybolat/search_job",
+        visitLink: "https://expo.dev/@ybolat/jobs?serviceType=classic&distribution=expo-go"
     }
 ];
 
@@ -48,6 +48,24 @@ const projectsAngular = [
     }
 ];
 
+const skillsArray = [
+    {
+        eventKey: "first",
+        skill: "React",
+        disabled: false
+    },
+    {
+        eventKey: "second",
+        skill: "React Native",
+        disabled: false
+    },
+    {
+        eventKey: "third",
+        skill: "Angular",
+        disabled: true
+    }
+]
+
 const Project = () => {
 
     const {t} = useTranslation();
@@ -61,15 +79,12 @@ const Project = () => {
                         <Tab.Container id={"projects-tabs"} defaultActiveKey={"first"}>
                             <Nav variant="pills" className="nav-pills mb-5 justify-content-center align-items-center"
                                  id="pills-tab">
-                                <Nav.Item>
-                                    <Nav.Link eventKey="first">React</Nav.Link>
-                                </Nav.Item>
-                                <Nav.Item>
-                                    <Nav.Link eventKey="second">Vue</Nav.Link>
-                                </Nav.Item>
-                                <Nav.Item>
-                                    <Nav.Link eventKey="third">Angular</Nav.Link>
-                                </Nav.Item>
+                                {skillsArray.map(skillVal => {
+                                    return <Nav.Item key={skillVal.eventKey}>
+                                        <Nav.Link eventKey={skillVal.eventKey}
+                                                  disabled={skillVal.disabled}>{skillVal.skill}</Nav.Link>
+                                    </Nav.Item>
+                                })}
                             </Nav>
                             <Tab.Content id={"slideInUp"}>
                                 <Tab.Pane eventKey={"first"}>
@@ -80,8 +95,8 @@ const Project = () => {
                                 </Tab.Pane>
                                 <Tab.Pane eventKey={"second"}>
                                     <Row>
-                                        {projectsVue.map((project, index) => <ProjectCard key={index}
-                                                                                          project={project}/>)}
+                                        {projectsReactNative.map((project, index) => <ProjectCard key={index}
+                                                                                                  project={project}/>)}
                                     </Row>
                                 </Tab.Pane>
                                 <Tab.Pane eventKey={"third"}>

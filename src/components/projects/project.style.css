@@ -96,3 +96,10 @@
     font-size: 15px;
     letter-spacing: 0.8px;
 }
+
+@media screen and (max-width: 425px) {
+    .project .nav.nav-pills .nav-link {
+        font-size: 14px;
+        font-weight: 400;
+    }
+}
