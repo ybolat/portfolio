@@ -29,8 +29,8 @@ const projectsReactNative = [
         titleEn: "Search job(Incomplete)",
         titleRu: "Поиск работы(Не законченное)",
         stack: "React Native, React, Expo",
-        descriptionEn: "In this project, you can search for jobs. There is a job search engine. You can go to the job site. In order to open the application you need to download the Expo application. Expo is available in appstore and google play. Then on IOS you need to open the camera and scan the QR, and on android you need to go to the application and scan the application through it.",
-        descriptionRu: `В этом проекте вы можете искать работу. Есть поисковик работы. Можно переходит на сайт вакансии. Для того, что бы открыть приложение нужно скачать приложение Expo. Expo доступен и в appstore и в google play. После на IOS нужно открыть камеру и отсканировать QR, а на android нужно зайди в приложение и через него отсканировать приложение.`,
+        descriptionEn: "In this project, you can search for jobs. There is a job search engine. You can go to the job site. In order to open the application you need to download the Expo application. Expo is available in appstore and google play. On android you need to go to the application and scan the application through it. On IOS it's impossible to open application, due to Apple policy",
+        descriptionRu: `В этом проекте вы можете искать работу. Есть поисковик работы. Можно переходит на сайт вакансии. Для того, что бы открыть приложение нужно скачать приложение Expo. Expo доступен и в appstore и в google play. На android нужно зайди в приложение и через него отсканировать приложение. На IOS невозможно открыть приложение из-за политики Apple`,
         gitHubLink: "https://github.com/ybolat/search_job",
         visitLink: "https://expo.dev/@ybolat/jobs?serviceType=classic&distribution=expo-go"
     }
