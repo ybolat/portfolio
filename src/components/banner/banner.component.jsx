@@ -2,12 +2,11 @@ import './banner.style.css';
 import {useEffect, useState} from "react";
 import {Col, Container, Row} from "react-bootstrap";
 import myPhoto from '../../assets/img/my-photo.png';
-import {ArrowRightCircle} from 'react-bootstrap-icons';
 import {useTranslation} from "react-i18next";
 
-const period = 100;
-const wordLoopEn = ["Web Developer", "Software Engineer", "Frontend Developer"];
-const wordLoopRu = ["Вэб Разработчик", "Инженер ПО", "Фронтенд Разработчик"];
+const period = 200;
+const wordLoopEn = ["Web Developer ", "Software Engineer ", "Frontend Developer "];
+const wordLoopRu = ["Вэб Разработчик ", "Инженер ПО ", "Фронтенд Разработчик "];
 
 const Banner = () => {
 
@@ -27,10 +26,10 @@ const Banner = () => {
         return () => {
             clearInterval(typeWord)
         }
-    }, [text]);
+    }, [text, typingPeriod]);
 
     const typingFunc = () => {
-        let wordLoop = [];
+        let wordLoop;
 
         if (i18n.language === 'ru') {
             wordLoop = wordLoopRu;

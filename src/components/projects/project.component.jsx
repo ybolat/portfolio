@@ -36,15 +36,24 @@ const projectsReactNative = [
     }
 ];
 
-const projectsAngular = [
+const projectsNext = [
     {
-        titleEn: "Unfortunately, there are no Angular projects yet.",
-        titleRu: "К сожелению пока нет проектов на Angular",
-        stack: "Angular",
-        descriptionEn: "Unfortunately, there are no Angular projects yet.",
-        descriptionRu: "К сожелению пока нет проектов на Angular",
-        gitHubLink: "https://github.com/ybolat/",
-        visitLink: "https://github.com/ybolat/"
+        titleEn: "Anime list",
+        titleRu: "Anime list",
+        stack: "Next 14, TailwindCss, Framer Motion, Server Action, Typescript",
+        descriptionEn: "List of the most popular anime. Here you can see anime rating, number of series and type of anime.",
+        descriptionRu: "Список самых популярных аниме. Тут вы сможете посмотреть рейтинг аниме, количество серии и тип аниме.",
+        gitHubLink: "https://github.com/ybolat/next-anime-list",
+        visitLink: "https://next-anime-list-ybolat.vercel.app/"
+    },
+    {
+        titleEn: "Quiz platform",
+        titleRu: "Платфлома для экзаминов",
+        stack: "Next 13, MUI, Mobx, Typescript",
+        descriptionEn: "Exam platform. There are different types of questions such as: open ended question, 1 answer question, 1 or more correct answer question, audio answer question, video answer question, photo answer question.",
+        descriptionRu: "Платформа для сдачи экзамена. Есть разные виды вопросов такие как: открытый вопрос, вопрос с 1 ответом, вопрос с 1 или более правильным ответом, вопрос с аудио ответом, вопрос с видео ответом, вопрос с фото ответом",
+        gitHubLink: "https://github.com/ybolat/SOBES-task",
+        visitLink: "https://sobes-task-two.vercel.app/"
     }
 ];
 
@@ -61,8 +70,8 @@ const skillsArray = [
     },
     {
         eventKey: "third",
-        skill: "Angular",
-        disabled: true
+        skill: "Next",
+        disabled: false
     }
 ]
 
@@ -101,8 +110,8 @@ const Project = () => {
                                 </Tab.Pane>
                                 <Tab.Pane eventKey={"third"}>
                                     <Row>
-                                        {projectsAngular.map((project, index) => <ProjectCard key={index}
-                                                                                              project={project}/>)}
+                                        {projectsNext.map((project, index) => <ProjectCard key={index}
+                                                                                           project={project}/>)}
                                     </Row>
                                 </Tab.Pane>
                             </Tab.Content>
