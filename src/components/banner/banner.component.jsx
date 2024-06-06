@@ -6,7 +6,7 @@ import {useTranslation} from "react-i18next";
 
 const period = 200;
 const wordLoopEn = ["Web Developer ", "Software Engineer ", "Frontend Developer "];
-const wordLoopRu = ["Вэб Разработчик ", "Инженер ПО ", "Фронтенд Разработчик "];
+const wordLoopRu = ["Веб Разработчик ", "Инженер ПО ", "Фронтенд Разработчик "];
 
 const Banner = () => {
 
